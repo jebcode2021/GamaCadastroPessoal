@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.: Cadastro Pessoal - Itaú :.</title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/logo.png" >
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    
+    <!-- Barra de navegacao -->
+    <div class="cabecalho">
+		<div class="content">
+			<a href="" class="logo"><img src="img/logo.png" alt="logo itaú" width="50px"></a>
+        </div>
+    </div>
+
+    <div class="content">
+		<div class="form">
+			<span class="titulo">Cadastro Pessoal <small>Preencha as informações abaixo e abra sua conta no Itaú!</small></span>
+		
+			<form action="obrigado.html" method="POST" onsubmit="return validarFormulario(this);">
+			<div class="coluna-12">
+				<span><span style="color:red">(*)</span> Campo obrigátorio</span>
+			</div>
+			<fieldset>
+				<div class="linha">
+				<div class="coluna-12"><legend>Dados pessoais</legend></div>
+					<div class="coluna-6">
+						<label>Nome completo<span style="color:red">*</span></label>
+						<input type="text" placeholder="Nome" id="nome" class="input-campo">
+						
+					</div>
+
+					<div class="coluna-6">
+						<label>Email</label>
+						<input type="text" placeholder="Nome" class="input-campo">
+					</div>
+
+					<div class="coluna-5">
+						<label >CPF<span style="color:red">*</span></label>
+						<input  type="cpff"  id="cpf" onkeydown="javascript: fMasc( this, mCPF );" placeholder="CPF" class="input-campo">
+						
+					</div>
+					<div class="coluna-5">
+						<label>RG</label>
+						<input type="text" placeholder="RG" class="input-campo">
+					</div>
+					<div class="coluna-5">
+						<label>Sexo</label>
+						<select class="input-campo">
+							<option value="">Selecione</option>
+							<option value="m">Masculino</option>
+							<option value="f">Feminino</option>
+						 </select>
+					</div>
+					<div class="coluna-5">
+						<label>Telefone Celular<span style="color:red">*</span></label>
+						<input type="tel" placeholder="(99) 9 9999-9999" maxlength="15" id="celular" class="input-campo">
+						
+					</div>
+					<div class="coluna-5">
+						<label>Telefone Fixo</label>
+						<input type="tel" placeholder="(99) 9999-9999" id="telefone" maxlength="15" class="input-campo">
+					</div>
+				</div>
+				<br>
+				<div class="linha">				
+					<div class="coluna-12"><legend>Dados Residencias</legend></div>			
+					<div class="coluna-6">
+						<label>Endereço<span style="color:red">*</span></label>
+						<input type="text" placeholder="Endereço" id="endereco" class="input-campo">
+						
+					</div>
+					
+					<div class="coluna-2">
+						<label>Número<span style="color:red">*</span></label>
+						<input type="text" id="numero"  placeholder="Número" class="input-campo">
+						
+					</div>
+
+					<div class="coluna-4">
+						<label>Bairro</label>
+						<input type="text" placeholder="Bairro" class="input-campo">
+					</div>
+
+					<div class="coluna-4">
+						<label>Cidade</label>
+						<input type="text" placeholder="Cidade" class="input-campo">
+					</div>
+
+					<div class="coluna-4">
+								<label>Estado</label>
+								<select class="input-campo"/>
+								  <option value="selecione">Selecione</option>
+								  <option value="AC">Acre</option>
+								  <option value="AL">Alagoas</option>
+								  <option value="AP">Amapá</option>
+								  <option value="AM">Amazonas</option>
+								  <option value="BA">Bahia</option>
+								  <option value="CE">Ceará</option>
+								  <option value="DF">Distrito Federal</option>
+								  <option value="ES">Espírito Santo</option>
+								  <option value="GO">Goiás</option>
+								  <option value="MA">Maranhão</option>
+								  <option value="MT">Mato Grosso</option>
+								  <option value="MS">Mato Grosso do Sul</option>
+								  <option value="MG">Minas Gerais</option>
+								  <option value="PA">Pará</option>
+								  <option value="PB">Paraíba</option>
+								  <option value="PR">Paraná</option>
+								  <option value="PE">Pernambuco</option>
+								  <option value="PI">Piauí</option>
+								  <option value="RJ">Rio de Janeiro</option>
+								  <option value="RN">Rio Grande do Norte</option>
+								  <option value="RS">Rio Grande do Sul</option>
+								  <option value="RO">Rondônia</option>
+								  <option value="RR">Roraima</option>
+								  <option value="SC">Santa Catarina</option>
+								  <option value="SP">São Paulo</option>
+								  <option value="SE">Sergipe</option>
+								  <option value="TO">Tocantins</option>
+								</select>
+					</div>	
+
+					<div class="coluna-4">
+						<label>CEP</label>
+						<input type="text" placeholder="CEP" onkeypress="mascaras(this, '#####-###')" maxlength="9" class="input-campo">
+					</div>
+
+					<div class="coluna-12" style="margin-top:20px">
+						<button type="submit" class="btn" id="enviar" >Confirmar cadastro</button>
+					</div>
+					
+				</div>
+			</fieldset>
+			</form>
+		</div>
+	</div>
+</div>	
+
+<!-- Rodapé -->
+<div class="rodape">
+	<p> Jonathan Euzébio Boza - Programa de Formação Itaú Tech para PCD em parceria com GAMA Academy. </p>
+	<p> ©2021 - Todos os direitos reservados. </p>
+</div>
+
+</body>
+
+<script type="text/javascript" src="js/validarFormulario.js"></script>
+<script type="text/javascript" src="js/mascara.js"></script>
+</html>
