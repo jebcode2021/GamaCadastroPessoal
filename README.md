@@ -1,5 +1,5 @@
 
-(#Gama--Cadastro--Pessoal-)
+# Gama - Cadastro Pessoal #
 ## Autor
 <img src="img/Jonathan.png" width="39%">
 
