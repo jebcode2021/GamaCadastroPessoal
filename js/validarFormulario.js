@@ -20,6 +20,11 @@ function validarFormulario(){
         cpf.focus();
         return false;
     }
+    if(isValid(celular.value)==false){
+        alert("O celular é inválido");
+        celular.focus();
+        return false;
+    }
     if(celular.value==""){
         alert("O campo celular é obrigatório");
         celular.focus();
@@ -96,3 +101,8 @@ function validaCpf(val) {
     } 
         return false;
     }
+    function isValid(p) {
+        var phoneRe = /^[2-9]\d{2}[2-9]\d{2}\d{5}$/;
+        var digits = p.replace(/\D/g, "");
+        return phoneRe.test(digits);
+      }
