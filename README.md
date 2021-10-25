@@ -2,7 +2,7 @@ Desafio Itaú - Gama - Equipe 10 - 2021
 
 
 ## Autor
-<img src="img/Jonathan.png" width="50%">
+<img src="img/Jonathan.png" width="39%">
 
 * **Nome:** Jonathan Euzébio Boza
 * **Idade:** 25 anos
