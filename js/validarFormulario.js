@@ -6,7 +6,7 @@ function validarFormulario(){
     var numero 		= document.getElementById("numero");
     
     if(nome.value==""){
-        alert("O campo nome é obrigatório");
+        alert("O campo nome completo é obrigatório");
         nome.focus();
         return false;
     }
@@ -20,7 +20,7 @@ function validarFormulario(){
         cpf.focus();
         return false;
     }
-    if(isValid(celular.value)==false){
+    if(validaCelular(celular.value)==false){
         alert("O celular é inválido");
         celular.focus();
         return false;
@@ -101,7 +101,7 @@ function validaCpf(val) {
     } 
         return false;
     }
-    function isValid(p) {
+    function validaCelular(p) {
         var phoneRe = /^[2-9]\d{2}[2-9]\d{2}\d{5}$/;
         var digits = p.replace(/\D/g, "");
         return phoneRe.test(digits);
